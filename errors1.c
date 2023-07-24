@@ -29,7 +29,7 @@ int _erratoi(char *s)
 }
 
 /**
- * print_error - Print an error message
+ * print_error - that Print an error message
  * @info: the parameter & return info struct
  * @estr: string containing specified error type
  * Return: 0 if no numbers in string, converted number otherwise
@@ -47,7 +47,7 @@ void print_error(info_t *info, char *estr)
 }
 
 /**
- * print_d - function prints a decimal (integer) number (base 10)
+ * print_d - that prints a decimal (integer) number (base 10)
  * @input: the input
  * @fd: the filedescriptor to write to
  *
@@ -56,7 +56,7 @@ void print_error(info_t *info, char *estr)
 int print_d(int input, int fd)
 {
 	int (*__putchar)(char) = _putchar;
-	int i, count = 0;
+	int y, count = 0;
 	unsigned int _abs_, current;
 
 	if (fd == STDERR_FILENO)
@@ -70,14 +70,14 @@ int print_d(int input, int fd)
 	else
 		_abs_ = input;
 	current = _abs_;
-	for (i = 1000000000; i > 1; i /= 10)
+	for (y = 1000000000; y > 1; y /= 10)
 	{
-		if (_abs_ / i)
+		if (_abs_ / y)
 		{
-			__putchar('0' + current / i);
+			__putchar('0' + current / y);
 			count++;
 		}
-		current %= i;
+		current %= y;
 	}
 	__putchar('0' + current);
 	count++;
@@ -134,7 +134,7 @@ void remove_comments(char *buf)
 	for (k = 0; buf[k] != '\0'; k++)
 		if (buf[k] == '#' && (!k || buf[k - 1] == ' '))
 		{
-			buf[i] = '\0';
+			buf[k] = '\0';
 			break;
 		}
 }
