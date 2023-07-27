@@ -1,7 +1,7 @@
 #include "shell.h"
 
 /**
- * _myexit  the shell's exiter
+ * _myexit - the shell's exiter
  * @info: Structure containing potential arguments. Used to maintain
  * constant function prototype.
  * Return: exits with a given exit status
